@@ -9,7 +9,7 @@ We will:
 - collect posts Using Pushshift's API
 - NLP with regex tokenizer, lemmatizer,  stemmer and tfidf-vectorizer
 - train two models (random forest and logistic regressin) 
-- 
+- analyse contribution of top 20 important features
 
 
 ## Dataset and Data Directory
@@ -32,17 +32,18 @@ We will:
 
 
 ## Metrics
-- To use **ROC AUC** to compare model perforamce, because the **AUC metric** utilizes probabilities of class prediction. Based on that, we’re able to more precisely evaluate and compare the models.
-    - The closer to 1, the better 'ROC AUC' is
+- To use `ROC AUC` to compare model performance
+    - The closer to 1, the better `ROC AUC` is
     - perc_diff must be less than 5%
-- To provide **Accuracy score** too. Since our data is balance and both positive and negative results are of same importance to us, **Accuracy score** is another good metric which is understandable and intuitive even to a non-technical person
+- To provide `Accuracy score` too. Since our data is balance and both positive and negative results are of same importance to us, `accuracy score` is another good metric which is understandable and intuitive even to a non-technical person
     - The closer to 1, the better 'Accuracy' is
     - perc_diff must be less than 5%
 
 
 ## Results
 - Two model have similar performance in term of ROC AUC score (around 0.85) and accuracy score (about 0.79). Logistic Regression model outperform slightly 
-- 
+- feature importance analysis show 65% of top important features are favorable to 'AskWomen'
+- stopwords play an important role in this model, mostly because abbreviations of stopwords such as 'whn','hw' occurs much more frequently in "AskMen". 
 
 
 ## Future Enhancement
