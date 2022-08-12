@@ -41,7 +41,7 @@ We will:
 
 
 ## Results
-- Two model have similar performance in term of ROC AUC score (around 0.85) and accuracy score (about 0.79). Logistic Regression model outperform slightly 
+- We built random forest model and logistic regression model. Logistic regression model outperformed in term of ROC AUC and Accuracy Score. 
 - feature importance analysis show 65% of top important features are favorable to 'AskWomen'
 - stopwords play an important role in this model, mostly because abbreviations of stopwords such as 'whn','hw' occurs much more frequently in "AskMen". 
 
